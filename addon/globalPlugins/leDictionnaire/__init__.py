@@ -186,10 +186,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			self.onLeDictionnaireDialog()
 			return
 		msg = f"<body>{htmlDefinition}</body>"
-		if config.conf["verbs"]["displayConjugationMode"] == "HTMLMessage":
+		if config.conf["leDictionnaire"]["displayLeDictionnaireMode"] == "HTMLMessage":
 			wx.CallAfter(ui.browseableMessage, title=title, message=msg, isHtml=True)
-		elif config.conf["verbs"]["displayConjugationMode"] == "defaultBrowser":
-			displayInDefaultBrowser(fileName="conjugaison", title=title, body=msg)
+		elif config.conf["leDictionnaire"]["displayLeDictionnaireMode"] == "defaultBrowser":
+			displayInDefaultBrowser(fileName="leDictionnaire", title=title, body=msg)
 		else:
 			wx.CallAfter(ui.browseableMessage, title=title, message=textDefinition)
 
