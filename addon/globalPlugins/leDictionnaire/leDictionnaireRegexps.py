@@ -11,7 +11,7 @@ patternClean = r"<[^>]*?>"
 patternTitle = r"<h1>.*?</h1>"
 patternDef = (
 	r'<div class="defbox(?: extraboxinfo)?">.*?'
-	'(<span>.*?</span>.*?<div class="(?:motboxinfo|wrapboxattention|wrapboxinfo)">.*?'
+	'(<span>.*?</span>.*?(?:<ul>.*?</ul>)?(?:<div class="(?:motboxinfo|wrapboxattention|wrapboxinfo)">)?.*?'
 	'</div>(.*?<ul>.*?</ul>)?)'
 )
 patternOl = r'<div class="defbox"><span>(?P<type>.*?)</span>.*?<ol style="[^>]*?>(?P<liste>.*?)</ol>'
